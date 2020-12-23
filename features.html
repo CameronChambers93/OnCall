@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Features - OnCall</title>
+    <link rel="icon" type="image/png" sizes="200x200" href="assets/img/logo.82b9c7a5.png">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css">
+    <link rel="stylesheet" href="assets/css/smoothproducts.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar" style="background-color: #374ebe !important;background-image: linear-gradient(transparent, rgba(255, 255, 255, 0.1));">
+        <div class="container"><a class="navbar-brand logo" href="index.html" style="color: rgba(255,255,255,0.9);">OnCall</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link active" href="features.html">Features</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="registration.html">Register</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://dev.d17o0irzplwggc.amplifyapp.com/" target="_blank">Login</a></li>
+                </ul>
+        </div>
+        </div>
+    </nav>
+    <main class="page">
+        <section class="clean-block features">
+            <div class="container">
+                <div class="align-content-center block-heading">
+                    <h2 class="text-info">Features</h2>
+                    <p>A change log will be added in the near future to track new and updated features</p>
+                    <div class="d-flex justify-content-center col-100" style="margin-top: 31px;">
+                        <div class="col-8">
+                            <ul class="list-unstyled text-left" style="font-size: 20px;">
+                                <li>Route Calls During/After Work Hours
+                                    <ul style="font-size: 18px;">
+                                        <li class="list-item">Choose your own physical number to direct calls to</li>
+                                        <li class="list-item">Allow clients to be routed through to physical phone</li>
+                                        <li class="list-item">Suited for organizations with regularly-houred office staff</li>
+                                    </ul>
+                                </li>
+                                <li>Ensure Reliability With a Callback Schedule
+                                    <ul style="font-size: 18px;">
+                                        <li class="list-item">The OnCall system will try multiple times to call the 'On Call' employee</li>
+                                        <li class="list-item">If the 'On Call' employee fails to answer a set number of calls, the call will be elevated and routed to a different employee, usually a manager<br></li>
+                                        <li class="list-item">This callback schedule is customizable and ensures that a client's call is answered to in a timely manner<br></li>
+                                    </ul>
+                                </li>
+                                <li>Receive Transcription and Recording of Request Calls
+                                    <ul style="font-size: 18px;">
+                                        <li class="list-item">Receive a text message with the audio transcription for quick access</li>
+                                        <li class="list-item">A secure, time-sensitive link to the audio recording of the call&nbsp;is also included in the text. This allows users to easily listen to recordings and repeat parts of the recording that are crucial or hard to
+                                            understand</li>
+                                        <li class="list-item">When the 'On Call' employee is notified of an alert, the system gives them the option to listen to a text-to-speech rendition of the audio transcription. This is a limitation of Amazon's Connect system, and something
+                                            for which we are looking for a workaround</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="align-content-center block-heading">
+                    <h2 class="text-info">AWS Cloud Computing</h2>
+                    <p>Below is a brief overview of the various AWS functionalities utilized by our backend services</p>
+                    <div class="d-flex justify-content-center col-100" style="margin-top: 31px;">
+                        <div class="col-8">
+                            <ul class="list-unstyled text-left" style="font-size: 20px;">
+                                <li>Appsync/GraphQL API
+                                    <ul>
+                                        <li class="list-item">Handles API calls made from the app and backend services</li>
+                                        <li class="list-item">Allows only authorized users to access data</li>
+                                    </ul>
+                                </li>
+                                <li>Amplify
+                                    <ul>
+                                        <li class="list-item">Project development console with CLI/Web interface</li>
+                                    </ul>
+                                </li>
+                                <li>Connect
+                                    <ul>
+                                        <li class="list-item">Handles phone calls made to/from the system</li>
+                                        <li class="list-item">Assigns a unique virtual phone number to each 'company'</li>
+                                    </ul>
+                                </li>
+                                <li>Cognito
+                                    <ul>
+                                        <li class="list-item">Allows users to securely log in to the system</li>
+                                        <li class="list-item">Provides authorization when accessing data</li>
+                                    </ul>
+                                </li>
+                                <li>DynamoDB
+                                    <ul>
+                                        <li class="list-item">NoSQL database for storing system and user information</li>
+                                        <li class="list-item">Efficient indexing schemes allow for very fast data access</li>
+                                    </ul>
+                                </li>
+                                <li>Lambda
+                                    <ul>
+                                        <li class="list-item">Severless functions provide functionality for backend services</li>
+                                    </ul>
+                                </li>
+                                <li>S3
+                                    <ul>
+                                        <li class="list-item">Stores the recordings from 'request' calls with encryption</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer dark">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <h5>Get started</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Sign up</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>About us</h5>
+                    <ul>
+                        <li><a href="about-us.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Support</h5>
+                    <ul>
+                        <li><a href="features.html">Features</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a onclick="alert(&quot;By using this service you must agree to not use it improperly or try to hack me&quot;)" style="cursor: pointer">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright" style="padding-bottom: 0;padding-top: 0;"><a href="https://www.linkedin.com/in/cameron-chambers-8bb676161/" target="_blank"><br>Please hire me :)<br><br></a></div>
+    </footer>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script src="assets/js/smoothproducts.min.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
