@@ -5,30 +5,20 @@ var data_js = {
 };
 
 
-function sendEmail(body) {
-	Email.send({
-        SecureToken: "79e21009-affb-4a41-a057-08c600e4870d",
-        To : 'no-reply@get-oncall.com',
-        From : "no-reply@get-oncall.com",
-        Subject : "User Registration",
-        Body : body,
-        }).then(
-            message => alert("mail sent successfully")
-	);
-}
 
 
 
 var sendButton = document.getElementById("submit_form");
 
-function handleSubmit() {
+function handleSubmit2() {
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
     let orgName = document.getElementById('organization-name').value
     let orgSize = document.getElementById('organization-size').value
     let callAmt = document.getElementById('number-of-calls').value
     let additionalInfo = document.getElementById('additional-info').value
-    let msg = "Name: " + name + '\nEmail: ' + email + '\nOrg Name: ' + orgName + '\nOrg Size: ' + orgSize + '\nCall Ammount: ' + callAmt + '\nAdditional Info: ' + additionalInfo
+    let msg2 = "Name: " + name + '\nEmail: ' + email + '\nOrg Name: ' + orgName + '\nOrg Size: ' + orgSize + '\nCall Ammount: ' + callAmt + '\nAdditional Info: ' + additionalInfo
+    let msg = {name: name, email: email, orgName: orgName, callAmt, additionalInfo}
     sendButton.value='Sending…';
     sendButton.disabled=true;
     
@@ -46,7 +36,7 @@ function handleSubmit() {
 }
 
 
-function handleSubmit2() {
+function handleSubmit() {
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
     let orgName = document.getElementById('organization-name').value
