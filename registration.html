@@ -39,16 +39,18 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Registration</h2>
-                    <p>At the time registration is not insantaneous, and more information may be required. Either way, we will contact you through email with your registration details</p>
+                    <p style="max-width: 690px;">At the time registration is not insantaneous, and more information may be required. Either way, we will contact you through email with your registration details</p>
                 </div>
                 <form id="email_form" action="&quot;http://postmail.invotes.com/send&quot;" method="&quot;post&quot;">
-                    <div class="form-group"><label for="name">Name</label><input class="form-control item" type="text" id="name" placeholder="Your Name" name="name"></div>
-                    <div class="form-group"><label for="password">Email</label><input class="form-control" type="email" id="email" placeholder="Your Email" name="email"></div>
-                    <div class="form-group"><label for="email">Organization name</label><input class="form-control" type="text" id="organization-name" placeholder="Organization Name" name="organization-name"></div>
-                    <div class="form-group"><label for="email">Organization size (in persons)</label><input class="form-control" type="number" id="organization-size" placeholder="Organization Size" name="organization-size"></div>
-                    <div class="form-group"><label for="email">About how many calls will be made daily?</label><input class="form-control" type="number" id="number-of-calls" placeholder="# of Calls" name="number-of-calls"></div>
-                    <div class="form-group"><label for="email">Additional information (optional)</label><textarea class="form-control" id="additional-info" placeholder="Additional Information" name="additional-info"></textarea></div><button class="btn btn-primary btn-block"
-                        id="submit_form" onclick="handleSubmit()" type="button">Sign Up</button></form>
+                    <div class="form-group"><label for="name">Name</label><input class="form-control item" type="text" id="name" placeholder="Your Name" name="name" required="" autofocus=""></div>
+                    <div class="form-group"><label for="password">Email</label><input class="form-control" type="email" id="email" placeholder="Your Email" name="email" required="" inputmode="email"></div>
+                    <div class="form-group"><label for="email">Organization name</label><input class="form-control" type="text" id="organization-name" placeholder="Organization Name" name="organization-name" required=""></div>
+                    <div class="form-group"><label for="email">Organization code (5-10 characters)</label><input class="form-control" type="text" id="organization-code" placeholder="Employees will use this to register" name="organization-code" required="" minlength="5" maxlength="10"></div>
+                    <div
+                        class="form-group"><label for="email">Organization size (in persons)</label><input class="form-control" type="number" id="organization-size" placeholder="Organization Size" name="organization-size" required="" min="0"></div>
+            <div class="form-group"><label for="email">About how many calls will be made weekly?</label><input class="form-control" type="number" id="number-of-calls" placeholder="# of Calls" name="number-of-calls" required="" min="0"></div>
+            <div class="form-group"><label for="email">Additional information (optional)</label><textarea class="form-control" id="additional-info" placeholder="How you plan to use the system, etc." name="additional-info"></textarea></div><button class="btn btn-primary btn-block"
+                id="submit_form" onclick="handleSubmit()" type="button">Sign Up</button></form>
             </div>
         </section>
     </main>

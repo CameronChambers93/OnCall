@@ -1,50 +1,45 @@
 var form_id_js = "javascript_form";
 
+butt = document.getElementById('submit_form')
+
+console.log(butt)
+
+butt.addEventListener('onsubmit', event => {
+  console.log('Let"s go');
+  event.preventDefault();
+  // actual logic, e.g. validate the form
+  console.log('Form submission cancelled.');
+});
+
 var data_js = {
     "access_token": "licdu2dsp96o0gx2lp084uys"
 };
 
-
-
-
-
 var sendButton = document.getElementById("submit_form");
 
-function handleSubmit2() {
-    let name = document.getElementById('name').value
-    let email = document.getElementById('email').value
-    let orgName = document.getElementById('organization-name').value
-    let orgSize = document.getElementById('organization-size').value
-    let callAmt = document.getElementById('number-of-calls').value
-    let additionalInfo = document.getElementById('additional-info').value
-    let msg2 = "Name: " + name + '\nEmail: ' + email + '\nOrg Name: ' + orgName + '\nOrg Size: ' + orgSize + '\nCall Ammount: ' + callAmt + '\nAdditional Info: ' + additionalInfo
-    let msg = {name: name, email: email, orgName: orgName, callAmt, additionalInfo}
-    sendButton.value='Sending…';
-    sendButton.disabled=true;
-    
-    
-    var subject = "New Registration"
-    var message = msg;
-    data_js['subject'] = subject;
-    data_js['text'] = message;
-    var params = toParams(data_js);
-
-    
-    sendEmail(msg)
-
-    return false;
-}
-
-
+var elementList = ['name', 'email', 'organization-name', 'organization-code', 'organization-size', 'number-of-calls', 'additional-info']
+                   
+                   
 function handleSubmit() {
+    for (const name of elementList) {
+        try {
+            if (document.getElementById(name).validity.valid == false) {
+                alert("Errors detected, please recheck your information and try again");
+                return   
+            }
+        } catch(e) {
+            console.log(e)
+        }
+    }
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
     let orgName = document.getElementById('organization-name').value
+    let orgCode = document.getElementById('organization-code').value
     let orgSize = document.getElementById('organization-size').value
     let callAmt = document.getElementById('number-of-calls').value
     let additionalInfo = document.getElementById('additional-info').value
-    let msg = "Name: " + name + '\nEmail: ' + email + '\nOrg Name: ' + orgName + '\nOrg Size: ' + orgSize + '\nCall Ammount: ' + callAmt + '\nAdditional Info: ' + additionalInfo
-    sendButton.value='Sending…';
+    let msg = "Name: " + name + '\nEmail: ' + email + '\nOrg Name: ' + orgName + '\nOrg Code: ' + orgCode + '\nOrg Size: ' + orgSize + '\nCall Ammount: ' + callAmt + '\nAdditional Info: ' + additionalInfo
+    sendButton.innerHTML='Sending…';
     sendButton.disabled=true;
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() {
@@ -71,16 +66,13 @@ function handleSubmit() {
 }
 
 function js_onSuccess() {
-    document.getElementById('name').value = ''
-    document.getElementById('email').value = ''
-    document.getElementById('organization-name').value = ''
-    document.getElementById('organization-size').value = ''
-    document.getElementById('number-of-calls').value = ''
-    document.getElementById('additional-info').value = ''
+    sendButton.innerHTML='Thank You';
     alert("Successfully sent")
 }
 
 function js_onError(error) {
+    sendButton.innerHTML = 'Sign Up'
+    sendButton.disabled = false;
     alert("Couldn't send email\n" + error)
 }
 
