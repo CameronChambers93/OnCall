@@ -25,6 +25,7 @@ The backend of the system is spread across various Amazon Web Services.
 
 [You can view the functional and non-functional requirements here](https://docs.google.com/document/d/e/2PACX-1vRtr8ONyB_Gec2oSvPq1U7rXo58swlQWRZDOhWRCuR-_O7SVRaMZMN3i42L9EK2n0iSQOqjenQMXYfu/pub). The original use case was for an apartment management company, and became generalized shortly after. As production continues, more requirements will be added.
 
+##
 I intend to monitize this project in the future, but not before significant improvements still. The program in its current state (as of 12/27) is just a bit more than functional. Immediate efforts will be directed at higher priority requirements, as well as fleshing out testing and test cases.
 
 If you would like to sign up for this service, please contact me through the "Register" link at [the app's front-facing website](https://www.get-oncall.com).
