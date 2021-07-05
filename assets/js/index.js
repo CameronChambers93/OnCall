@@ -1,15 +1,53 @@
 var form_id_js = "javascript_form";
+var butt; var left; var right;
+try{
+    butt = document.getElementById('submit_form')
+    butt.addEventListener('onsubmit', event => {
+      console.log('Let"s go');
+      event.preventDefault();
+      // actual logic, e.g. validate the form
+      console.log('Form submission cancelled.');
+    });
+} catch(e) {
+    e == false;
+}
 
-butt = document.getElementById('submit_form')
+var slideLength;
+var cSlide = 0
+console.log(cSlide)
 
-console.log(butt)
+function prev(container) {
+    container.children[cSlide].style.display = 'none';
+    if (cSlide == 0)
+        cSlide = slideLength - 1
+    else
+        cSlide -= 1
+    container.children[cSlide].style.display = 'block';
+}
 
-butt.addEventListener('onsubmit', event => {
-  console.log('Let"s go');
-  event.preventDefault();
-  // actual logic, e.g. validate the form
-  console.log('Form submission cancelled.');
-});
+function next(container) {
+    container.children[cSlide].style.display = 'none';
+    cSlide = (cSlide + 1) % slideLength;
+    container.children[cSlide].style.display = 'block';
+}
+
+try{
+    left = document.getElementById('carousel-left')
+    right = document.getElementById('carousel-right')  
+    container = document.getElementById('div-holder')
+    slideLength = container.children.length
+    console.log(container)
+    left.onclick = function() {
+        prev(container)
+    }
+    right.onclick = function() {
+        next(container)
+    }
+} catch(e) {
+    e == false;
+    console.log(e)
+}
+
 
 var data_js = {
     "access_token": "licdu2dsp96o0gx2lp084uys"

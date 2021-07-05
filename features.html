@@ -27,7 +27,6 @@
                 <ul class="nav navbar-nav ml-auto">
                     <li class="nav-item" role="presentation"><a class="nav-link" href="index.html">Home</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link active" href="features.html">Features</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="registration.html">Register</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="https://login.get-oncall.com/" target="_blank">Login</a></li>
                 </ul>
@@ -39,80 +38,40 @@
             <div class="container">
                 <div class="align-content-center block-heading">
                     <h2 class="text-info">Features</h2>
-                    <p>A change log will be added in the near future to track new and updated features</p>
+                    <p></p>
                     <div class="d-flex justify-content-center col-100" style="margin-top: 31px;">
-                        <div class="col-8">
+                        <div class="col-12 col-lg-10">
                             <ul class="list-unstyled text-left" style="font-size: 20px;">
-                                <li>Route Calls During/After Work Hours
+                                <li style="font-weight: bold;">Recieve your own virtual number
                                     <ul style="font-size: 18px;">
-                                        <li class="list-item">Choose your own physical number to direct calls to</li>
-                                        <li class="list-item">Allow clients to be routed through to physical phone</li>
-                                        <li class="list-item">Suited for organizations with regularly-houred office staff</li>
+                                        <li class="list-item" style="font-weight: normal;">Virtual numbers are assigned by AWS with an 866 area code. We may be able to provide custom numbers upon request.</li>
+                                        <li class="list-item" style="font-weight: normal;">Audio prompts to greet and instruct customers on how to leave requests are customizeable and read by a text-to-speech bot</li>
                                     </ul>
                                 </li>
-                                <li>Ensure Reliability With a Callback Schedule
+                                <li style="font-weight: bold;">Online access through web and mobile application
                                     <ul style="font-size: 18px;">
-                                        <li class="list-item">The OnCall system will try multiple times to call the 'On Call' employee</li>
-                                        <li class="list-item">If the 'On Call' employee fails to answer a set number of calls, the call will be elevated and routed to a different employee, usually a manager<br></li>
-                                        <li class="list-item">This callback schedule is customizable and ensures that a client's call is answered to in a timely manner<br></li>
+                                        <li class="list-item" style="font-weight: normal;">The application allows you to manage the 'On Call' schedule, view information about current and past requests, and edit company/employee information.</li>
+                                        <li class="list-item" style="font-weight: normal;">The application allows you to manage the 'On Call' schedule, view information about current and past requests, and edit company/employee information.</li>
+                                        <li class="list-item" style="font-weight: normal;">The mobile app provides the same functionality as the web app, and can be installed on a user's home screen.</li>
                                     </ul>
                                 </li>
-                                <li>Receive Transcription and Recording of Request Calls
+                                <li style="font-weight: bold;">Route Calls During/After Work Hours
                                     <ul style="font-size: 18px;">
-                                        <li class="list-item">Receive a text message with the audio transcription for quick access</li>
-                                        <li class="list-item">A secure, time-sensitive link to the audio recording of the call&nbsp;is also included in the text. This allows users to easily listen to recordings and repeat parts of the recording that are crucial or hard to
-                                            understand</li>
-                                        <li class="list-item">When the 'On Call' employee is notified of an alert, the system gives them the option to listen to a text-to-speech rendition of the audio transcription. This is a limitation of Amazon's Connect system, and something
-                                            for which we are looking for a workaround</li>
+                                        <li class="list-item" style="font-weight: normal;">Choose your own physical number to direct normal calls to, if desired<br></li>
+                                        <li class="list-item" style="font-weight: normal;">Suited for organizations with regularly-houred office staff</li>
                                     </ul>
                                 </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="align-content-center block-heading">
-                    <h2 class="text-info">AWS Cloud Computing</h2>
-                    <p>Below is a brief overview of the various AWS functionalities utilized by our backend services</p>
-                    <div class="d-flex justify-content-center col-100" style="margin-top: 31px;">
-                        <div class="col-8">
-                            <ul class="list-unstyled text-left" style="font-size: 20px;">
-                                <li>Appsync/GraphQL API
-                                    <ul>
-                                        <li class="list-item">Handles API calls made from the app and backend services</li>
-                                        <li class="list-item">Allows only authorized users to access data</li>
+                                <li style="font-weight: bold;">Ensure Reliability With a Callback Schedule
+                                    <ul style="font-size: 18px;">
+                                        <li class="list-item" style="font-weight: normal;">The OnCall system will try multiple times to call the 'On Call' employee.&nbsp;If the 'On Call' employee fails to answer a set number of calls, the call will be elevated and routed to a manager<br></li>
                                     </ul>
                                 </li>
-                                <li>Amplify
-                                    <ul>
-                                        <li class="list-item">Project development console with CLI/Web interface</li>
-                                    </ul>
-                                </li>
-                                <li>Connect
-                                    <ul>
-                                        <li class="list-item">Handles phone calls made to/from the system</li>
-                                        <li class="list-item">Assigns a unique virtual phone number to each 'company'</li>
-                                    </ul>
-                                </li>
-                                <li>Cognito
-                                    <ul>
-                                        <li class="list-item">Allows users to securely log in to the system</li>
-                                        <li class="list-item">Provides authorization when accessing data</li>
-                                    </ul>
-                                </li>
-                                <li>DynamoDB
-                                    <ul>
-                                        <li class="list-item">NoSQL database for storing system and user information</li>
-                                        <li class="list-item">Efficient indexing schemes allow for very fast data access</li>
-                                    </ul>
-                                </li>
-                                <li>Lambda
-                                    <ul>
-                                        <li class="list-item">Severless functions provide functionality for backend services</li>
-                                    </ul>
-                                </li>
-                                <li>S3
-                                    <ul>
-                                        <li class="list-item">Stores the recordings from 'request' calls with encryption</li>
+                                <li style="font-weight: bold;">Receive Transcription and Recording of Request Calls
+                                    <ul style="font-size: 18px;">
+                                        <li class="list-item" style="font-weight: normal;">Receive a text message with the audio transcription as well as a&nbsp;secure, time-sensitive link to the audio recording of the call<br></li>
+                                        <li class="list-item" style="font-weight: normal;">The recording can also be accessed at any time through the OnCall app<br></li>
+                                        <li class="list-item" style="font-weight: normal;">When listening to the message via phone call, a text-to-speech rendition of the audio transcription is heard. This is currently a limitation of Amazon's Connect system, and something for which we are looking for
+                                            a workaround</li>
                                     </ul>
                                 </li>
                             </ul>
@@ -152,7 +111,7 @@
                 </div>
             </div>
         </div>
-        <div class="footer-copyright" style="padding-bottom: 0;padding-top: 0;"><a href="https://www.linkedin.com/in/cameron-chambers-8bb676161/" target="_blank"><br>Please hire me :)<br><br></a></div>
+        <div class="footer-copyright" style="padding-bottom: 0;padding-top: 0;"><a href="https://www.linkedin.com/in/cameron-chambers-8bb676161/" target="_blank"><br>Want to hire me?<br><br></a></div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
